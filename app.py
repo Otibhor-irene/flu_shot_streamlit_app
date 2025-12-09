@@ -39,9 +39,9 @@ def load_data():
         data = pd.read_csv("flu_df.csv")
 
         # Ensure a lowercase binned age group column is available for visualizations.
-        if "age" in data.columns and "age_group_binned" not in data.columns:
+        if "age_group" in data.columns and "age_group_binned" not in data.columns:
             data["age_group_binned"] = pd.cut(
-                data["age"],
+                data["age_group"],
                 bins=[18, 40, 60, 85, 100],
                 labels=["Young (18-39)", "Middle (40-59)", "Elderly (60-84)", "Senior (85+)"],
                 right=False,
