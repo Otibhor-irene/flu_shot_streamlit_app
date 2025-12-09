@@ -13,12 +13,12 @@ from sklearn.inspection import PartialDependenceDisplay
 # TICKET 3.3.1: CONFIG & BASIC STRUCTURE
 # =========================================================
 st.set_page_config(
-    page_title="Flu Vaccination Interactive Dashboard",
+    page_title= "Flu Vaccination Interactive Dashboard",
     page_icon="💉",
     layout="wide",
 )
 
-st.title("💉 Flu Vaccination Interactive Dashboard")
+st.title("Flu Vaccination Interactive Dashboard")
 
 # Implement session state management for persistence
 if "last_prediction" not in st.session_state:
@@ -157,7 +157,7 @@ page = st.sidebar.radio(
 # PAGE: PREDICTION INTERFACE (TICKET 3.3.3)
 # =========================================================
 if page == "Prediction Interface":
-    st.header("🔬 Interactive Prediction & Explanation Tool")
+    st.header("Interactive Prediction & Explanation Tool")
 
     if not tuned_models or flu_df.empty:
         st.stop()
@@ -346,7 +346,7 @@ elif page == "Feature Exploration":
 # PAGE: DEMOGRAPHIC DASHBOARD (TICKET 3.3.2 & 3.3.4 Comparison)
 # =========================================================
 elif page == "Demographic Dashboard":
-    st.header("📊 Demographic Trends & Vaccination Patterns")
+    st.header("Demographic Trends & Vaccination Patterns")
     
     st.markdown("### Vaccination Rates by Key Demographics (Comparison Views)")
     col1, col2 = st.columns(2)
