@@ -1,13 +1,12 @@
+%%writefile requirements.txt
 streamlit
 pandas
 numpy
 plotly
 joblib
+scikit-learn
 shap
 matplotlib
 seaborn
-lightgbm
+lightgbm 
 xgboost
-imbalanced-learn
-scikit-learn>=1.4.0
-
