@@ -19,7 +19,7 @@ st.set_page_config(
     layout="wide",
 )
 
-st.title(" Flu Vaccination Interactive Dashboard")
+st.title("💉 Flu Vaccination Interactive Dashboard")
 
 # Implement session state management for persistence
 if "last_prediction" not in st.session_state:
@@ -168,7 +168,7 @@ page = st.sidebar.radio(
 # PAGE: PREDICTION INTERFACE (TICKET 3.3.3)
 # =========================================================
 if page == "Prediction Interface":
-    st.header(" Interactive Prediction & Explanation Tool")
+    st.header("🔬 Interactive Prediction & Explanation Tool")
 
     if not tuned_models or flu_df.empty:
         st.stop()
@@ -184,9 +184,9 @@ if page == "Prediction Interface":
     model_info = tuned_models[target_choice]
     model = model_info['pipe']
     
-    st.markdown("###Build an interactive form for entering predictor variables")
+    st.markdown("### 👤 Build an interactive form for entering predictor variables")
     
-    with st.form(" prediction_form"):
+    with st.form("prediction_form"):
         colA, colB = st.columns(2)
 
         input_data = {}
@@ -289,7 +289,7 @@ if page == "Prediction Interface":
 # PAGE: FEATURE EXPLORATION (TICKET 3.3.4)
 # =========================================================
 elif page == "Feature Exploration":
-    st.header(" Feature Exploration: Model Explanations")
+    st.header("🔭 Feature Exploration: Model Explanations")
     
     # Create interactive feature importance visualizations (Two charts)
     st.markdown("### Global Feature Importance (Top 10)")
@@ -363,7 +363,7 @@ elif page == "Feature Exploration":
 # PAGE: DEMOGRAPHIC DASHBOARD (TICKET 3.3.2 & 3.3.4 Comparison)
 # =========================================================
 elif page == "Demographic Dashboard":
-    st.header(" Demographic Trends & Vaccination Patterns")
+    st.header("📊 Demographic Trends & Vaccination Patterns")
     
     st.markdown("### Vaccination Rates by Key Demographics (Comparison Views)")
     col1, col2 = st.columns(2)
@@ -403,7 +403,7 @@ elif page == "Demographic Dashboard":
 # PAGE: INSIGHTS & RECOMMENDATIONS (TICKET 3.3.5)
 # =========================================================
 elif page == "Insights & Recommendations":
-    st.header(" Actionable Insights & Strategic Recommendations")
+    st.header("🧠 Actionable Insights & Strategic Recommendations")
     
     # Create a summary page with key findings
     st.subheader("Key Findings (Supported by Data)")
